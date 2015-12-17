@@ -31,7 +31,7 @@ class PluginMediaStreamRenderer : NSObject, RTCEAGLVideoViewDelegate {
 
 		self.elementView.userInteractionEnabled = false
 		self.elementView.hidden = true
-		self.elementView.backgroundColor = UIColor.clearColor()
+		self.elementView.backgroundColor = UIColor.blackColor()
 		self.elementView.addSubview(self.videoView)
 		self.elementView.layer.masksToBounds = true
 
