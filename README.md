@@ -17,6 +17,16 @@ Check the [release announcement](https://eface2face.com/blog/cordova-plugin-iosr
 * [Bug Tracker](https://github.com/eface2face/cordova-plugin-iosrtc/issues) for reporting issues and requesting new features (please don't use the bug tracker for questions or problems, use the Google Group instead).
 
 
+## Requirements
+
+In order to make this Cordova plugin run into a iOS application some requirements must be satisfied in both development computer and target devices:
+
+* Xcode >= 7.2.1
+* iOS >= 9 (run on lower versions at your own risk, but don't open issues)
+* `cordova-ios` 3.9.X (don't attempt to use 4.X)
+* No bitcode (built-in *libwebrtc* does not contain bitcode so you need to disable it in your Xcode project settings)
+
+
 ## Installation
 
 Within your Cordova project:
@@ -31,7 +41,7 @@ $ cordova plugin add cordova-plugin-iosrtc
 ## Building
 
 * [Building](docs/Building.md): Guidelines for building a Cordova iOS application including the *cordova-plugin-iosrtc* plugin.
-* [Building `libwebrtc`](docs/BuildingLibWebRTC.md): Guidelines for building Google's *libwebrtc* with modifications needed by the *cordova-plugin-iosrtc* plugin.
+* [Building `libwebrtc`](docs/BuildingLibWebRTC.md): Guidelines for building Google's *libwebrtc* with modifications needed by the *cordova-plugin-iosrtc* plugin (just in case you want to use a different version of *libwebrtc* or aplpy your own changes to it).
 
 
 ## Usage
@@ -138,6 +148,16 @@ Methods such as `play()`, `pause()` are not implemented. In order to pause a vid
 
 ## Changelog
 
+
+#### Version 2.2.3 (*not yet released*)
+
+* `RTCDataChannel`: Allow empty `label` ([issue #124](https://github.com/eface2face/cordova-plugin-iosrtc/issues/124)).
+
+* Update [yaeti](https://www.npmjs.com/package/yaeti) dependency ([issue #123](https://github.com/eface2face/cordova-plugin-iosrtc/issues/123)).
+
+* Fix retain on `pluginMediaStreamTrack` does not allow camera/mic to be freed ([PR #126](https://github.com/eface2face/cordova-plugin-iosrtc/pull/126)). Credits to @oNaiPs.
+
+* Allow a handled video element to be removed from the DOM and added again later ([PR #127](https://github.com/eface2face/cordova-plugin-iosrtc/pull/127)). Credits to @oNaiPs.
 
 #### Version 2.2.2
 

@@ -39,6 +39,11 @@ class PluginMediaStreamRenderer : NSObject, RTCEAGLVideoViewDelegate {
 	}
 
 
+	deinit {
+		NSLog("PluginMediaStreamRenderer#deinit()")
+	}
+
+
 	func run() {
 		NSLog("PluginMediaStreamRenderer#run()")
 
